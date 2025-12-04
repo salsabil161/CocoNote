@@ -6,10 +6,14 @@ A database‑driven academic resource hub for IUT student
 CocoNote is a university-focused web platform where students can upload, share, download, and upvote academic notes.
 It is designed as a DBMS-centric project, featuring:
 
-*Multi-table entity relationships
-*Junction tables for many-to-many connections
+-Multi-table entity relationships
+
+-Junction tables for many-to-many connections
+
 -Complex SQL joins, triggers, and stored procedures
+
 -Automated badge awarding
+
 -Usage statistics and analytics
 
 The platform organizes notes by department, course, semester, and category, helping students quickly find the resources they need.
@@ -18,6 +22,7 @@ The platform organizes notes by department, course, semester, and category, help
 ### User & Authentication
 
 -Students can create accounts
+
 -Each user has badges and statistics
 
 ### Notes Management
@@ -25,29 +30,42 @@ The platform organizes notes by department, course, semester, and category, help
 Upload PDFs.
 
 Each note includes:
+  
   -Title and description
+
   -Category (Past Papers, Lab Materials, Lecture Notes, etc.)
+  
   -Linked department and course
+  
   -Upload date, file size, type
 
 ### Engagement Features
 
+
 -Users can upvote notes
+
 -Users can download notes
+
 -Automatic counters for upvotes and downloads
 
 ### Gamification with Badges
 
 -Badges are awarded automatically based on:
+
 -Upload milestones
+
 -Upvote milestones
+
 -Download milestones
 
 ### Analytics Dashboard
 
 -Most downloaded notes
+
 -Top contributors
+
 -Course-wise activity
+
 -Department-wise usage trends
 
 ## Database Design (ERD Summary)
@@ -58,15 +76,21 @@ User, Department, Course, Category, Note, Download, Upvote, Badge, User_Badge.
 ### Highlights:
 
 -Proper normalization
+
 -Clear foreign keys and cascading rules
+
 -Many-to-many relationships using junction tables
+
 -Triggers for automated operations
 
 ## Tech Stack
 
   -Frontend: HTML, CSS, JS (or any modern framework)
+  
   -Backend: Node.js and Express.js
+  
   -Database: PostgreSQL
+  
   -Version Control: Github
 
 ## DBMS-Focused Functionalities
