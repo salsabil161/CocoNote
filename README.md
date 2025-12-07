@@ -1,120 +1,97 @@
-# CocoNote
-A database‑driven academic resource hub for IUT student
+# 📘 CocoNote – University Note Sharing Platform
+*A database‑driven academic resource hub for students*
 
-## Overview
+---
 
-CocoNote is a university-focused web platform where students can upload, share, download, and upvote academic notes.
-It is designed as a DBMS-centric project, featuring:
+## 🚀 Overview
 
-- Multi-table entity relationships 
+**CocoNote** is a university‑focused web application where students can **upload, share, download, and upvote academic notes**.  
+This project is designed as a **DBMS‑centric system** for an RDBMS course and demonstrates:
 
-- Junction tables for many-to-many connections
+- Advanced relational database design  
+- Complex SQL queries  
+- Stored procedures & triggers  
+- Automated engagement features  
+- Data integrity and normalization  
 
-- Complex SQL joins, triggers, and stored procedures
+Notes are organized by **Department, Course, Semester, and Category** to ensure easy access to resources.
 
-- Automated badge awarding
+---
 
-- Usage statistics and analytics
+## 📌 Features
 
-The platform organizes notes by department, course, semester, and category, helping students quickly find the resources they need.
+### 👤 User Management
+- Student account creation
+- Profile with activity statistics
+- Badge rewards system
 
-## Key Features
-### User & Authentication
+### 📄 Notes Management
+- Upload & manage notes (PDF, image, docs)
+- Categorization (Exam Papers, Lab Materials, Lecture Notes, etc.)
+- Course & department based organization
 
-- Students can create accounts
+### 👍 Engagement System
+- Upvoting system
+- Download tracking
+- Automatic counter updates using triggers
 
-- Each user has badges and statistics
+### 🏆 Badge System
+- Badges based on:
+  - Total uploads
+  - Total downloads
+  - Total upvotes
+- Automatically assigned using SQL triggers
 
-### Notes Management
-
-Upload PDFs.
-
-Each note includes:
-  
-  - Title and description
-
-  - Category (Past Papers, Lab Materials, Lecture Notes, etc.)
-  
-  - Linked department and course
-  
-  - Upload date, file size, type
-
-### Engagement Features
-
-
-- Users can upvote notes
-
-- Users can download notes
-
-- Automatic counters for upvotes and downloads
-
-### Gamification with Badges
-
-- Badges are awarded automatically based on:
-
-- Upload milestones
-
-- Upvote milestones
-
-- Download milestones
-
-### Analytics Dashboard
-
-- Most downloaded notes
-
+### 📊 Analytics & Reporting
 - Top contributors
+- Most downloaded notes
+- Department‑wise activity
+- Course‑wise statistics
 
-- Course-wise activity
+---
 
-- Department-wise usage trends
+## 🗂️ Database Design (ERD Summary)
 
-## Database Design (ERD Summary)
+Main Entities:
 
-### Core entities:
-User, Department, Course, Category, Note, Download, Upvote, Badge, User_Badge.
+- User  
+- Department  
+- Course  
+- Category  
+- Note  
+- Download  
+- Upvote  
+- Badge  
+- User_Badge (junction table)
 
-### Highlights:
+Key Relationships:
 
-- Proper normalization
+- One User → Many Notes  
+- One Course → Many Notes  
+- One Category → Many Notes  
+- One Note → Many Downloads  
+- User ↔ Badge (Many‑to‑Many)
 
-- Clear foreign keys and cascading rules
+The database includes:
+- Primary & Foreign Keys
+- Junction tables
+- Cascading relationships
+- Normalized schema
 
-- Many-to-many relationships using junction tables
+---
 
-- Triggers for automated operations
+## 🛠️ Tech Stack
 
-## Tech Stack
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP / Node.js / Django (any can be used)  
+- **Database:** MySQL / PostgreSQL  
 
-  - Frontend: HTML, CSS, JS (or any modern framework)
-  
-  - Backend: Node.js and Express.js
-  
-  - Database: PostgreSQL
-  
-  - Version Control: Github
+---
 
-## DBMS-Focused Functionalities
 
-This project demonstrates advanced SQL including:
+## 📜 License
 
-  - Multi-table JOINs
+This project is developed for academic and educational purposes only.
 
-  - Aggregations 
+## 📁 Project Structure
 
-  - Triggers 
-
-  - Stored procedures 
-
-  - Referential integrity and constraints
-
-  - Audit logging
-
-## Project Goals
-
-- Build a production-style relational database
-
-- Demonstrate SQL mastery (triggers, procedures, constraints)
-
-- Deliver a functional note-sharing platform
-
-- Encourage academic collaboration
